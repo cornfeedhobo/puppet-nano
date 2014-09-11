@@ -1,0 +1,34 @@
+{
+  "name": "cornfeedhobo-nano",
+  "version": "0.1.0",
+  "author": "cornfeedhobo",
+  "summary": "Install nano with handy syntax highlighting. Optionally make it the default editor.",
+  "license": "GPLv3",
+  "source": "https://github.com/cornfeedhobo/puppet-nano.git",
+  "project_page": "https://github.com/cornfeedhobo/puppet-nano",
+  "issues_url": "https://github.com/cornfeedhobo/puppet-nano/issues",
+  "tags": [
+    "nano",
+    "editor"
+  ],
+  "operatingsystem_support": [
+    {
+      "operatingsystem": "CentOS",
+      "operatingsystemrelease": [
+        "6"
+      ]
+    }
+  ],
+  "requirements": [
+    {
+      "name": "puppet",
+      "version_requirement": ">= 3.7.0"
+    }
+  ],
+  "dependencies": [
+    {
+      "name": "puppetlabs/stdlib",
+      "version_requirement": ">= 4.3.2"
+    }
+  ]
+}

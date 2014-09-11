@@ -1,0 +1,49 @@
+## This is Puppet controlled. Any changes will be overwritten.
+
+## Do case sensitive searches by default.
+<%- unless @casesensitive -%># <%- end -%>set casesensitive
+
+## Constantly display the cursor position in the statusbar.  Note that
+## this overrides "quickblank".
+<%- unless @const -%># <%- end -%>set const
+
+## Use cut to end of line by default.
+<%- unless @cut -%># <%- end -%>set cut
+
+## Use the blank line below the titlebar as extra editing space.
+<%- unless @morespace -%># <%- end -%>set morespace
+
+## Don't convert files from DOS/Mac format.
+<%- unless @noconvert -%># <%- end -%>set noconvert
+
+## Don't display the helpful shortcut lists at the bottom of the screen.
+<%- unless @nohelp -%># <%- end -%>set nohelp
+
+## Don't add newlines to the ends of files.
+<%- unless @nonewlines -%># <%- end -%>set nonewlines
+
+## Don't wrap text at all.
+<%- unless @nowrap -%># <%- end -%>set nowrap
+
+## Do extended regular expression searches by default.
+<%- unless @regexp -%># <%- end -%>set regexp
+
+## Make the Home key smarter.  When Home is pressed anywhere but at the
+## very beginning of non-whitespace characters on a line, the cursor
+## will jump to that beginning (either forwards or backwards).  If the
+## cursor is already at that position, it will jump to the true
+## beginning of the line.
+<%- unless @smarthome -%># <%- end -%>set smarthome
+
+## Use smooth scrolling as the default.
+<%- unless @smooth -%># <%- end -%>set smooth
+
+## Convert typed tabs to spaces.
+<%- unless @tabstospaces -%># <%- end -%>set tabstospaces
+
+## Use this tab size instead of the default; it must be greater than 0.
+<%- unless @tabsize -%># <%- end -%>set tabsize <%= @tabsize %>
+
+<%- @includes.each do |include| -%>
+include "/usr/share/nano/<%= include -%>.nanorc"
+<%- end -%>
