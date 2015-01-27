@@ -97,7 +97,7 @@ class nano (
   $tabsize       = $::nano::params::tabsize,
   $tabstospaces  = $::nano::params::tabstospaces) inherits ::nano::params {
   notice('nano::begin')
-  contain ::nano::install
-  contain ::nano::config
+  include ::nano::install
+  include ::nano::config
   notice('nano::end')
 }
