@@ -7,7 +7,7 @@ class nano::install ($default = $::nano::params::default) inherits ::nano::param
   if str2bool($default) {
     file { '/etc/profile.d/nano.sh':
       ensure  => 'file',
-      content => file('nano/nano.sh'),
+      source => 'puppet:///modules/nano/nano.sh',
       mode    => '0644',
       owner   => 'root',
       group   => 'root',
